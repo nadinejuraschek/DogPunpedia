@@ -1,16 +1,23 @@
+// MODELS
+require("./models/Pun");
+require("./models/Hashtag");
+
 // NPM PACKAGES
-const   dotenv      = require("dotenv"), 
-        express     = require("express"),
-        mongoose    = require("mongoose");
+const   dotenv          = require("dotenv"), 
+        express         = require("express"),
+        mongoose        = require("mongoose");
 
 // FILES AND FOLDERS
-
+const   punRoutes       = require("./routes/punRoutes"),
+        hashtagRoutes   = require("./routes/hashtagRoutes");
 
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
+app.use(punRoutes);
+app.use(hashtagRoutes);
 
 // DATABASE
 mongoose.connect(process.env.MONGO_DB, {
