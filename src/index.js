@@ -3,9 +3,14 @@ const   dotenv      = require("dotenv"),
         express     = require("express"),
         mongoose    = require("mongoose");
 
+// FILES AND FOLDERS
+
+
 dotenv.config();
 
 const app = express();
+
+app.use(express.json());
 
 // DATABASE
 mongoose.connect(process.env.MONGO_DB, {
