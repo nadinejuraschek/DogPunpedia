@@ -32,10 +32,13 @@ mongoose.connection.on("error", (err) => {
     console.log(`Error connecting to MongoDB: ${err}`);
 });
 
-// ROUTES
-app.get("/", (req, res) => {
-    res.send("Hi there!");
-});
+// DEPLOYMENT
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+};
+
+// If no API routes are hit, send the React app
+app.use((req, res) => res.sendFile(path.join(__dirname, './client/build/index.html')));
 
 // SERVER
 app.listen(process.env.PORT, () => {
