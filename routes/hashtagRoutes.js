@@ -6,7 +6,7 @@ const   express     = require("express"),
 const   router  = express.Router();
 
 // CREATE
-router.post("/hashtag/create", async (req, res) => {
+router.post("/api/hashtag/create", async (req, res) => {
     const { id, hashtag } = req.body;
 
     try {
@@ -21,13 +21,13 @@ router.post("/hashtag/create", async (req, res) => {
 });
 
 // READ
-router.get("/hashtag/all", async (req, res) => {
+router.get("/api/hashtag/all", async (req, res) => {
     const hashtags = await Hashtag.find({});
 
     res.send(hashtags);
 });
 
-router.get("/hashtag", async (req, res) => {
+router.get("/api/hashtag", async (req, res) => {
     const randomHashtag = await Hashtag.aggregate([{ $sample: { size: 1 } }]);
 
     res.send(randomHashtag);

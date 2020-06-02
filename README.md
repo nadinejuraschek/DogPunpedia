@@ -7,4 +7,4 @@
     * dotenv
     * mongoose
 * MongoDB
-* React Native
+* React

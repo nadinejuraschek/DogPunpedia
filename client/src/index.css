@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@700&display=swap');
+
+body {
+  color: #25282B;
+  font-family: 'Chivo';
+  font-size: 10px;
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  box-shadow: 0 5px 10px 0 #eee;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+nav p {
+  color: #406A5D;
+  font-family: 'Averia Libre';
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+main {
+  align-items: center;
+  background-image: linear-gradient(144.54deg, #5BB79A -10.44%, #2C6B58 118.98%);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  height: -o-calc(100vh - 64px); /* opera */
+  height: -webkit-calc(100vh - 64px); /* google, safari */
+  height: -moz-calc(100vh - 64px); /* firefox */
+}
+
+main a {
+  text-decoration: none;
+  width: 100%;
+}
+.custom-btn {
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;
+  height: 8rem;
+  padding: 0 2rem;
+  margin: 1rem;
+}
+
+.custom-btn img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.custom-btn p {
+  color: #406A5D;
+  font-family: 'Averia Libre';
+  font-size: 3rem;
+}
+
+main .show {
+  align-items: flex-end;
+  background-image: linear-gradient(144.54deg, #5BB79A -10.44%, #2C6B58 118.98%);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  height: -o-calc(100vh - 64px); /* opera */
+  height: -webkit-calc(100vh - 64px); /* google, safari */
+  height: -moz-calc(100vh - 64px); /* firefox */
+}
+
+.random-result {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-size: 3rem;
+  height: calc(100vh - 150px);
+  height: -o-calc(100vh - 150px); /* opera */
+  height: -webkit-calc(100vh - 150px); /* google, safari */
+  height: -moz-calc(100vh - 150px); /* firefox */
+  justify-content: center;
+  line-height: 3.5rem;
+  margin: 0;
+  text-align: center;
+  width: 80%;
+}
+
+img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.back {
+  height: 1.5rem;
+  width: 1.5rem;
+}

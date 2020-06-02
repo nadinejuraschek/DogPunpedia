@@ -6,7 +6,7 @@ const   express     = require("express"),
 const   router  = express.Router();
 
 // CREATE
-router.post("/pun/create", async (req, res) => {
+router.post("/api/pun/create", async (req, res) => {
     const { id, type, pun } = req.body;
 
     try {
@@ -21,25 +21,25 @@ router.post("/pun/create", async (req, res) => {
 });
 
 // READ
-router.get("/pun/all", async (req, res) => {
+router.get("/api/pun/all", async (req, res) => {
     const puns = await Pun.find({});
 
     res.send(puns);
 });
 
-router.get("/pun/adjective", async (req, res) => {
+router.get("/api/pun/adjective", async (req, res) => {
     const randomPun = await Pun.aggregate([{ $match: { type: "adjective" } }, { $sample: { size: 1 } }]);
 
     res.send(randomPun);
 });
 
-router.get("/pun/noun", async (req, res) => {
+router.get("/api/pun/noun", async (req, res) => {
     const randomPun = await Pun.aggregate([{ $match: { type: "noun" } }, { $sample: { size: 1 } }]);
 
     res.send(randomPun);
 });
 
-router.get("/pun/phrase", async (req, res) => {
+router.get("/api/pun/phrase", async (req, res) => {
     const randomPun = await Pun.aggregate([{ $match: { type: "phrase" } }, { $sample: { size: 1 } }]);
 
     res.send(randomPun);

@@ -1,19 +1,31 @@
+// REACT
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+// COMPONENTS
+import HashtagScreen from './src/screens/HashtagScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import PunScreen from './src/screens/PunScreen';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const navigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Hashtag: HashtagScreen,
+    Pun: PunScreen
   },
-});
+  {
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      title: 'Social Media Helper'
+    }
+  }
+);
+
+const App = createAppContainer(navigator);
+
+export default () => {
+  return (
+    <App />
+  );
+};
