@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ICONS
-// import AgainIcon from '../components/AgainIcon';
+import AgainIcon from '../components/AgainIcon';
 
 const Phrase = () => {
     const [ phrase, setPhrase ] = useState('');
@@ -17,12 +17,20 @@ const Phrase = () => {
         }).then(res => setPhrase(res.data[0].pun));
     }, []);
 
+    const getNewResult = (event) => {
+        event.preventDefault();
+        axios({
+            url: '/api/pun/phrase',
+            method: 'GET'
+        }).then(res => setPhrase(res.data[0].pun));
+    };
+
     return (
         <main>
             <p className='random-result'>
                 {phrase}
             </p>
-            {/* <AgainIcon /> */}
+            <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
         </main>
     );
 };

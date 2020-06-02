@@ -14,10 +14,7 @@ const Adjective = () => {
         axios({
             url: '/api/pun/adjective',
             method: 'GET'
-        }).then(res => {
-            const result = res.data[0].pun;
-            setAdjective(result);
-        });
+        }).then(res => setAdjective(res.data[0].pun));
     }, []);
 
     const getNewResult = (event) => {
@@ -25,10 +22,7 @@ const Adjective = () => {
         axios({
             url: '/api/pun/adjective',
             method: 'GET'
-        }).then(res => {
-            const result = res.data[0].pun;
-            setAdjective(result);
-        });
+        }).then(res => setAdjective(res.data[0].pun));
     };
 
     return (

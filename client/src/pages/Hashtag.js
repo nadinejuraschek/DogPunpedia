@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ICONS
-// import AgainIcon from '../components/AgainIcon';
+import AgainIcon from '../components/AgainIcon';
 
 const Hashtag = () => {
     const [ hashtag, setHashtag ] = useState('');
@@ -17,12 +17,20 @@ const Hashtag = () => {
         }).then(res => setHashtag(res.data[0].hashtag));
     }, []);
 
+    const getNewResult = (event) => {
+        event.preventDefault();
+        axios({
+            url: '/api/hashtag',
+            method: 'GET'
+        }).then(res => setHashtag(res.data[0].hashtag));
+    };
+
     return (
         <main>
             <p className='random-result'>
                 {hashtag}
             </p>
-            {/* <AgainIcon /> */}
+            <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
         </main>
     );
 };
