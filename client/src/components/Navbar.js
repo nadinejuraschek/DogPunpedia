@@ -2,12 +2,12 @@
 import React from 'react';
 
 // ICONS
-import BackIcon from '../components/BackIcon';
+// import BackIcon from '../components/BackIcon';
 
 const Navbar = () => {
     return (
         <nav>
-            <BackIcon />
+            {/* <BackIcon /> */}
             {/* { pageTitle === 'Home' 
                 ? null
                 : <BackIcon onClick={() => history.goBack()}/> 
