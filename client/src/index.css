@@ -99,3 +99,34 @@ img {
   height: 1.5rem;
   width: 1.5rem;
 }
+
+.again-btn {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/**** SPINNER ****/
+.spinner:before {
+  content: '';
+  border: 3px solid #eeeeee;
+  border-radius: 50%;
+  border-top-color: #75B753;
+  box-sizing: border-box;
+  height: 50px;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+      transform: rotate(360deg)
+  };
+}

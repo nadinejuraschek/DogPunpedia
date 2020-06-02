@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ICONS
-// import AgainIcon from '../components/AgainIcon';
+import AgainIcon from '../components/AgainIcon';
 
 const Adjective = () => {
     const [ adjective, setAdjective ] = useState('');
@@ -14,15 +14,29 @@ const Adjective = () => {
         axios({
             url: '/api/pun/adjective',
             method: 'GET'
-        }).then(res => setAdjective(res.data[0].pun));
+        }).then(res => {
+            const result = res.data[0].pun;
+            setAdjective(result);
+        });
     }, []);
+
+    const getNewResult = (event) => {
+        event.preventDefault();
+        axios({
+            url: '/api/pun/adjective',
+            method: 'GET'
+        }).then(res => {
+            const result = res.data[0].pun;
+            setAdjective(result);
+        });
+    };
 
     return (
         <main>
             <p className='random-result'>
                 {adjective}
             </p>
-            {/* <AgainIcon /> */}
+            <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
         </main>
     );
 };
