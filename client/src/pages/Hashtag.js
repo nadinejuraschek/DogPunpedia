@@ -27,10 +27,12 @@ const Hashtag = () => {
 
     return (
         <main>
+            <div className="btn-container">
+                <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
+            </div>
             <p className='random-result'>
                 {hashtag}
             </p>
-            <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
         </main>
     );
 };

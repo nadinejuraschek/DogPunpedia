@@ -107,6 +107,18 @@ img {
   font-size: 1.5rem;
 }
 
+.again-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 80%;
+}
+
 /**** SPINNER ****/
 .spinner:before {
   content: '';

@@ -4,6 +4,6 @@ import React from "react";
 // ICONS
 import redo from '../assets/icons/redo.svg';
 
-const AgainIcon = () => <img alt='try again' src={redo} />;
+const AgainIcon = () => <img className='again-icon' alt='try again' src={redo} />;
 
 export default AgainIcon;

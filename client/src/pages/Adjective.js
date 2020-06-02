@@ -27,10 +27,12 @@ const Adjective = () => {
 
     return (
         <main>
+            <div className="btn-container">
+                <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
+            </div>
             <p className='random-result'>
                 {adjective}
             </p>
-            <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
         </main>
     );
 };
