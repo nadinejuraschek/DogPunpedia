@@ -119,6 +119,33 @@ img {
   width: 80%;
 }
 
+.submit {
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  color: #406A5D;
+  font-family: 'Averia Libre';
+  font-size: 1.5rem;
+  display: flex;
+  height: 3rem;
+  padding: 0 2rem;
+  margin: 1rem;
+}
+
+form div {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+form input {
+  background-color: #ffffff70;
+  border: none;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 10rem;
+}
+
 /**** SPINNER ****/
 .spinner:before {
   content: '';

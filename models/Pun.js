@@ -2,10 +2,6 @@
 const mongoose = require("mongoose");
 
 const punSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        unique: true
-    },
     type: {
         type: String,
         required: true

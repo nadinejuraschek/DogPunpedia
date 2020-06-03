@@ -16,6 +16,7 @@ import Hashtag from '../pages/Hashtag';
 import Adjective from '../pages/Adjective';
 import Noun from '../pages/Noun';
 import Phrase from '../pages/Phrase';
+import AddPun from '../pages/AddPun';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path='/pun'>
             <Puns />
+          </Route>
+          <Route path='/create'>
+            <AddPun />
           </Route>
           <Route path='/'>
             <Home />
