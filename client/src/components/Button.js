@@ -4,6 +4,7 @@ import React from 'react';
 // ICONS
 import BookIcon from './BookIcon';
 import HashtagIcon from './HashtagIcon';
+import PlusIcon from './PlusIcon';
 
 const Button = ({ title, icon }) => {
     return (
@@ -12,7 +13,9 @@ const Button = ({ title, icon }) => {
                 ? <BookIcon /> 
                 : icon === 'hashtag' 
                     ? <HashtagIcon /> 
-                    : null
+                    : icon === 'plus' 
+                        ? <PlusIcon />
+                        : null
             }
             <p>{title}</p>
         </div>

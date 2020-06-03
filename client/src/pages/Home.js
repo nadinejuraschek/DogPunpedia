@@ -9,10 +9,13 @@ const Home = () => {
     return (
         <main>
             <Link to='/pun'>
-                <Button title='Puns' icon='book' href='/pun' />
+                <Button title='Puns' icon='book' />
             </Link>
             <Link to='/hashtag'>
-                <Button title='Hashtags' icon='hashtag' href='/hashtag' />
+                <Button title='Hashtags' icon='hashtag' />
+            </Link>
+            <Link to='/create'>
+                <Button title='New Pun' icon='plus' />
             </Link>
         </main>
     );
