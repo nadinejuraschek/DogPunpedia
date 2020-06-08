@@ -39,6 +39,7 @@ main a {
   text-decoration: none;
   width: 100%;
 }
+
 .custom-btn {
   align-items: center;
   background-color: #ffffff;
@@ -128,25 +129,76 @@ img {
   font-family: 'Averia Libre';
   font-size: 1.5rem;
   display: flex;
-  height: 3rem;
+  height: 4rem;
   padding: 0 2rem;
-  margin: 1rem;
-}
-
-form div {
   margin: 1rem auto;
   width: 100%;
 }
 
-form input {
-  background-color: #ffffff70;
-  border: none;
-  border-radius: 0.5rem;
-  height: 2rem;
-  width: 10rem;
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
 }
 
-/**** SPINNER ****/
+form div {
+  margin: 1rem auto;
+  width: 20rem;
+}
+
+form input {
+  background-color: #ffffff80;
+  border: none;
+  border-radius: 0.5rem;
+  color: #25282B80;
+  font-family: 'Chivo';
+  font-size: 1.25rem;
+  height: 4rem;
+  padding-left: 1rem;
+  width: 95%;
+}
+
+form select {
+  background-color: #ffffff80;
+  border: none;
+  border-radius: 0.5rem;
+  color: #25282B80;
+  font-family: 'Chivo';
+  font-size: 1.25rem;
+  height: 4rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+form button {
+  justify-content: center;
+}
+
+.submit-message {
+  color: #ffffff;
+  font-family: 'Chivo';
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/**********************************************
+ MEDIA QUERIES
+**********************************************/
+@media screen and (min-width: 701px) {
+  main a {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 901px) {
+  main a {
+    width: 40%;
+  }
+}
+
+/**********************************************
+ SPINNER
+**********************************************/
 .spinner:before {
   content: '';
   border: 3px solid #eeeeee;

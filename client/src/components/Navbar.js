@@ -12,7 +12,7 @@ const Navbar = () => {
                 ? null
                 : <BackIcon onClick={() => history.goBack()}/> 
             } */}
-            <p>Social Media Helper</p>
+            <p>BarkGrr Punpedia</p>
         </nav>
     );
 };
