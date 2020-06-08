@@ -99,7 +99,9 @@ img {
 .back {
   height: 1.5rem;
   width: 1.5rem;
-  margin-right: 2rem;
+  position: absolute;
+    top: 1.4rem;
+    left: 2rem;
 }
 
 .again-btn {
