@@ -1,18 +1,18 @@
 // REACT
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // ICONS
-// import BackIcon from '../components/BackIcon';
+import BackIcon from '../components/BackIcon';
 
-const Navbar = () => {
+const Navbar = ({ prevPage, title }) => {
     return (
         <nav>
-            {/* <BackIcon /> */}
-            {/* { pageTitle === 'Home' 
-                ? null
-                : <BackIcon onClick={() => history.goBack()}/> 
-            } */}
-            <p>BarkGrr Punpedia</p>
+            { prevPage 
+                ? <Link to={prevPage}><BackIcon /></Link>
+                : null
+            }
+            <p>{title}</p>
         </nav>
     );
 };

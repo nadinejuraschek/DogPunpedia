@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 
 // COMPONENTS
 import Button from '../components/Button';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
     return (
+        <>
+        <Navbar title='BarkGrr Punpedia' />
         <main>
             <Link to='/pun'>
                 <Button title='Puns' icon='book' />
@@ -18,6 +21,7 @@ const Home = () => {
                 <Button title='New Pun' icon='plus' />
             </Link>
         </main>
+        </>
     );
 };
 

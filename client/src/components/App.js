@@ -6,9 +6,6 @@ import {
   Route
 } from "react-router-dom";
 
-// COMPONENTS
-import Navbar from '../components/Navbar';
-
 // PAGES
 import Home from '../pages/Home';
 import Puns from '../pages/Puns';
@@ -22,7 +19,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Switch>
           <Route path='/pun/adjective'>
             <Adjective />

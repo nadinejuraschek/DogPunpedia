@@ -5,9 +5,13 @@ import { Link } from 'react-router-dom';
 // COMPONENTS
 import Button from '../components/Button';
 
+// COMPONENTS
+import Navbar from '../components/Navbar';
+
 const Puns = () => {
     return (
         <>
+        <Navbar prevPage='/' title='Puns'  />
         <main>
             <Link to='/pun/adjective'>
                 <Button title='Adjective' />

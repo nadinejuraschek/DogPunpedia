@@ -7,6 +7,9 @@ import axios from 'axios';
 // ICONS
 import AgainIcon from '../components/AgainIcon';
 
+// COMPONENTS
+import Navbar from '../components/Navbar';
+
 const Noun = () => {
     const [ noun, setNoun ] = useState('');
 
@@ -26,6 +29,8 @@ const Noun = () => {
     };
 
     return (
+        <>
+        <Navbar prevPage='/pun' title='Noun'  />
         <main>
             <div className="btn-container">
                 <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
@@ -34,6 +39,7 @@ const Noun = () => {
                 {noun}
             </p>
         </main>
+        </>
     );
 };
 

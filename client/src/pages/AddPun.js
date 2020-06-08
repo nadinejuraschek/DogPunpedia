@@ -6,6 +6,7 @@ import axios from 'axios';
 
 // COMPONENTS
 import SubmitButton from '../components/SubmitButton';
+import Navbar from '../components/Navbar';
 
 const AddPun = () => {
     const [ newPun, setNewPun ] = useState({ type: '', pun: '' });
@@ -36,6 +37,8 @@ const AddPun = () => {
     };
 
     return (
+        <>
+        <Navbar prevPage='/' title='Add a Pun' />
         <main>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -70,6 +73,7 @@ const AddPun = () => {
                 <div className='submit-message'>{message}</div>
             </form>
         </main>
+        </>
     );
 };
 

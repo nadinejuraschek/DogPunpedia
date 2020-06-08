@@ -7,6 +7,9 @@ import axios from 'axios';
 // ICONS
 import AgainIcon from '../components/AgainIcon';
 
+// COMPONENTS
+import Navbar from '../components/Navbar';
+
 const Hashtag = () => {
     const [ hashtag, setHashtag ] = useState('');
 
@@ -26,6 +29,8 @@ const Hashtag = () => {
     };
 
     return (
+        <>
+        <Navbar prevPage='/' title='Hashtag'  />
         <main>
             <div className="btn-container">
                 <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
@@ -34,6 +39,7 @@ const Hashtag = () => {
                 {hashtag}
             </p>
         </main>
+        </>
     );
 };
 
