@@ -17,7 +17,7 @@ const Hashtag = () => {
         axios({
             url: '/api/hashtag',
             method: 'GET'
-        }).then(res => setHashtag(res.data[0].hashtag));
+        }).then(res => setHashtag(res.data[0].pun));
     }, []);
 
     const getNewResult = (event) => {
@@ -25,7 +25,7 @@ const Hashtag = () => {
         axios({
             url: '/api/hashtag',
             method: 'GET'
-        }).then(res => setHashtag(res.data[0].hashtag));
+        }).then(res => setHashtag(res.data[0].pun));
     };
 
     return (
