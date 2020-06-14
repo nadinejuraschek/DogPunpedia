@@ -1,4 +1,4 @@
-# barkgrr-socialmediahelper
+# Dog Punpedia for BarkGrr
 
 ## Technologies
 * JavaScript
