@@ -11,3 +11,6 @@
     * mongoose
 * MongoDB
 * React
+
+## Preview
+![Preview](./preview.gif)
