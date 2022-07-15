@@ -1,16 +1,10 @@
-// REACT
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-// NPM PACKAGES
-import axios from 'axios';
-
-// ICONS
 import AgainIcon from '../components/AgainIcon';
 import AllIcon from '../components/AllIcon';
-
-// COMPONENTS
-import Navbar from '../components/Navbar';
 import List from '../components/List';
+import Navbar from '../components/Navbar';
+import axios from 'axios';
 
 const Hashtag = () => {
     const [ hashtag, setHashtag ] = useState('');

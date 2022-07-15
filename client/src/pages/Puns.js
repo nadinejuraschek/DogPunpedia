@@ -1,15 +1,8 @@
-// REACT
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-// COMPONENTS
 import Button from '../components/Button';
-
-// COMPONENTS
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
-const Puns = () => {
-    return (
+const Puns = () => (
         <>
         <Navbar prevPage='/' title='Puns'  />
         <main>
@@ -25,6 +18,5 @@ const Puns = () => {
         </main>
         </>
     );
-};
 
 export default Puns;

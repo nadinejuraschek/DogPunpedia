@@ -1,14 +1,10 @@
-// REACT
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-// ICONS
 import BackIcon from '../components/BackIcon';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ prevPage, title }) => {
     return (
         <nav>
-            { prevPage 
+            { prevPage
                 ? <Link to={prevPage}><BackIcon /></Link>
                 : null
             }

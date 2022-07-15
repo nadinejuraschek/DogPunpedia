@@ -1,14 +1,8 @@
-// REACT
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-// NPM PACKAGES
-import axios from 'axios';
-
-// ICONS
 import AgainIcon from '../components/AgainIcon';
-
-// COMPONENTS
 import Navbar from '../components/Navbar';
+import axios from 'axios';
 
 const Phrase = () => {
     const [ phrase, setPhrase ] = useState('');

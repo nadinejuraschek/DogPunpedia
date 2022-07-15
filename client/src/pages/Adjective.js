@@ -1,11 +1,7 @@
-// REACT
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-// ICONS
 import AgainIcon from '../components/AgainIcon';
-// COMPONENTS
 import Navbar from '../components/Navbar';
-// NPM PACKAGES
 import axios from 'axios';
 
 const Adjective = () => {

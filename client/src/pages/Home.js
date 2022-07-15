@@ -1,13 +1,8 @@
-// REACT
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-// COMPONENTS
 import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
-const Home = () => {
-    return (
+const Home = () => (
         <>
         <Navbar title='BarkGrr Punpedia' />
         <main>
@@ -23,6 +18,5 @@ const Home = () => {
         </main>
         </>
     );
-};
 
 export default Home;

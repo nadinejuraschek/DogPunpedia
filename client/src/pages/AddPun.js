@@ -1,12 +1,7 @@
-// REACT
-import React, { useState } from 'react';
-
-// NPM PACKAGES
-import axios from 'axios';
-
-// COMPONENTS
-import SubmitButton from '../components/SubmitButton';
 import Navbar from '../components/Navbar';
+import SubmitButton from '../components/SubmitButton';
+import axios from 'axios';
+import { useState } from 'react';
 
 const AddPun = () => {
     const [ newPun, setNewPun ] = useState({ type: '', pun: '' });
