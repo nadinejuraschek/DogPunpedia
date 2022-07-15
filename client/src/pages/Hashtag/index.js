@@ -1,12 +1,9 @@
+import { Icon, List, Navbar } from '../../components';
 import { useEffect, useState } from 'react';
 
-import AgainIcon from '../components/AgainIcon';
-import AllIcon from '../components/AllIcon';
-import List from '../components/List';
-import Navbar from '../components/Navbar';
 import axios from 'axios';
 
-const Hashtag = () => {
+export const Hashtag = () => {
     const [ hashtag, setHashtag ] = useState('');
     const [ list, setList ] = useState('');
 
@@ -43,8 +40,8 @@ const Hashtag = () => {
         <Navbar prevPage='/' title='Hashtag'  />
         <main>
             <div className="btn-container">
-                <button className='all-btn' onClick={getAllResults}><AllIcon /></button>
-                <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
+                <button className='all-btn' onClick={getAllResults}><Icon type="all" /></button>
+                <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>
             </div>
             <div className='random-result'>
                 { list ? <List list={list} /> : hashtag}
@@ -53,5 +50,3 @@ const Hashtag = () => {
         </>
     );
 };
-
-export default Hashtag;

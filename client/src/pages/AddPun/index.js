@@ -1,9 +1,9 @@
-import Navbar from '../components/Navbar';
-import SubmitButton from '../components/SubmitButton';
+import { Button, Navbar } from '../../components';
+
 import axios from 'axios';
 import { useState } from 'react';
 
-const AddPun = () => {
+export const AddPun = () => {
     const [ newPun, setNewPun ] = useState({ type: '', pun: '' });
     const [ message, setMessage ] = useState('');
 
@@ -42,7 +42,7 @@ const AddPun = () => {
                         type='text'
                         placeholder='Enter New Pun Here'
                         onChange={handleChange}
-                        value={newPun.pun} 
+                        value={newPun.pun}
                     />
                 </div>
                 <div>
@@ -64,12 +64,10 @@ const AddPun = () => {
                         </option>
                     </select>
                 </div>
-                <SubmitButton />
+                <Button type="submit" />
                 <div className='submit-message'>{message}</div>
             </form>
         </main>
         </>
     );
 };
-
-export default AddPun;

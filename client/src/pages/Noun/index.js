@@ -1,10 +1,9 @@
+import { Icon, Navbar } from '../../components';
 import { useEffect, useState } from 'react';
 
-import AgainIcon from '../components/AgainIcon';
-import Navbar from '../components/Navbar';
 import axios from 'axios';
 
-const Noun = () => {
+export const Noun = () => {
     const [ noun, setNoun ] = useState('');
 
     useEffect(() => {
@@ -27,7 +26,7 @@ const Noun = () => {
         <Navbar prevPage='/pun' title='Noun'  />
         <main>
             <div className="btn-container">
-                <button className='again-btn' onClick={getNewResult}><AgainIcon /></button>
+                <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>
             </div>
             <p className='random-result'>
                 {noun}
@@ -36,5 +35,3 @@ const Noun = () => {
         </>
     );
 };
-
-export default Noun;

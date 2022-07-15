@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 nav {
   align-items: center;
   box-shadow: 0 5px 10px 0 #eee;
