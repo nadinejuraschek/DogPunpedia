@@ -1,14 +1,12 @@
 // REACT
-import React, { useState, useEffect } from 'react';
-
-// NPM PACKAGES
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 // ICONS
 import AgainIcon from '../components/AgainIcon';
-
 // COMPONENTS
 import Navbar from '../components/Navbar';
+// NPM PACKAGES
+import axios from 'axios';
 
 const Adjective = () => {
     const [ adjective, setAdjective ] = useState('');
@@ -17,7 +15,9 @@ const Adjective = () => {
         axios({
             url: '/api/pun/adjective',
             method: 'GET'
-        }).then(res => setAdjective(res.data[0].pun));
+        }).then(res => {
+            setAdjective(res.data[0].pun);
+        }).catch(err => console.log(err));
     }, []);
 
     const getNewResult = (event) => {
@@ -25,7 +25,9 @@ const Adjective = () => {
         axios({
             url: '/api/pun/adjective',
             method: 'GET'
-        }).then(res => setAdjective(res.data[0].pun));
+        }).then(res => {
+            setAdjective(res.data[0].pun)
+        }).catch(err => console.log(err));
     };
 
     return (

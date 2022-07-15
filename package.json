@@ -1,10 +1,9 @@
 {
-  "name": "barkgrr-socialmediahelper",
+  "name": "dog-punpedia",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
@@ -24,9 +23,12 @@
   "homepage": "https://github.com/nadinejuraschek/barkgrr-socialmediahelper#readme",
   "dependencies": {
     "bson": "^4.0.4",
-    "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.20"
   }
 }

@@ -2,9 +2,10 @@
 require("./models/Pun");
 
 // NPM PACKAGES
-const   dotenv          = require("dotenv"), 
+const   dotenv          = require("dotenv"),
         express         = require("express"),
-        mongoose        = require("mongoose");
+        mongoose        = require("mongoose"),
+        path            = require('path');
 
 // FILES AND FOLDERS
 const   punRoutes       = require("./routes/punRoutes");
