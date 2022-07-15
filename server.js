@@ -19,7 +19,6 @@ app.use(punRoutes);
 
 // DATABASE
 mongoose.connect(process.env.MONGO_DB, {
-    useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

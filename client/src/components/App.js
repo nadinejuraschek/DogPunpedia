@@ -15,27 +15,13 @@ import Puns from '../pages/Puns';
 const App = () => (
   <Router>
     <Routes>
-      <Route path='/pun/adjective'>
-        <Adjective />
-      </Route>
-      <Route path='/pun/noun'>
-        <Noun />
-      </Route>
-      <Route path='/pun/phrase'>
-        <Phrase />
-      </Route>
-      <Route path='/hashtag'>
-        <Hashtag  />
-      </Route>
-      <Route path='/pun'>
-        <Puns />
-      </Route>
-      <Route path='/create'>
-        <AddPun />
-      </Route>
-      <Route path='/'>
-        <Home />
-      </Route>
+      <Route path='/pun/adjective' element={<Adjective />} />
+      <Route path='/pun/noun' element={<Noun />} />
+      <Route path='/pun/phrase' element={<Phrase />} />
+      <Route path='/hashtag' element={<Hashtag />} />
+      <Route path='/pun' element={<Puns />} />
+      <Route path='/create' element={<AddPun />} />
+      <Route path='/' element={<Home />} />
     </Routes>
   </Router>
 );
