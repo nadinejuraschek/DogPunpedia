@@ -1,52 +1,40 @@
 import { Icon, List, Navbar } from '../../components';
+import { getAllHashtags, getHashtag } from '../../helper/queries';
 import { useEffect, useState } from 'react';
 
-import axios from 'axios';
-
 export const Hashtag = () => {
+    const [ displayList, setDisplayList ] = useState(false);
     const [ hashtag, setHashtag ] = useState('');
     const [ list, setList ] = useState('');
 
     useEffect(() => {
-        axios({
-            url: '/api/hashtag',
-            method: 'GET'
-        }).then(res => setHashtag(res.data[0].pun));
-    }, []);
+        getHashtag(setHashtag);
+        getAllHashtags(setList);
+    }, [displayList]);
 
-    const getNewResult = (event) => {
+    const getNewResult = event => {
         event.preventDefault();
-        axios({
-            url: '/api/hashtag',
-            method: 'GET'
-        }).then(res => setHashtag(res.data[0].pun));
+        getHashtag(setHashtag);
     };
 
     const getAllResults = (event) => {
         event.preventDefault();
-        axios({
-            url: '/api/hashtag/all',
-            method: 'GET'
-        }).then(res => {
-            const listRes = res.data;
-            const listArray = [];
-            listRes.map(item => listArray.push(item.pun));
-            setList(listArray);
-        });
+        setDisplayList(!displayList);
     }
 
     return (
         <>
-        <Navbar prevPage='/' title='Hashtag'  />
-        <main>
-            <div className="btn-container">
-                <button className='all-btn' onClick={getAllResults}><Icon type="all" /></button>
-                <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>
-            </div>
-            <div className='random-result'>
-                { list ? <List list={list} /> : hashtag}
-            </div>
-        </main>
+            <Navbar prevPage='/' title='Hashtag'  />
+            <main>
+                <div className="btn-container">
+                    <button className='all-btn' onClick={getAllResults}><Icon type={displayList ? 'singleItem' : 'all'} /></button>
+                    {!displayList && <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>}
+                </div>
+                <div className='random-result'>
+                    { displayList && <List list={list} /> }
+                    {!displayList && hashtag }
+                </div>
+            </main>
         </>
     );
 };

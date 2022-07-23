@@ -1,37 +1,31 @@
 import { Icon, Navbar } from '../../components';
 import { useEffect, useState } from 'react';
 
-import axios from 'axios';
+import { getNoun } from '../../helper/queries';
 
 export const Noun = () => {
     const [ noun, setNoun ] = useState('');
 
     useEffect(() => {
-        axios({
-            url: '/api/pun/noun',
-            method: 'GET'
-        }).then(res => setNoun(res.data[0].pun));
+        getNoun(setNoun);
     }, []);
 
     const getNewResult = (event) => {
         event.preventDefault();
-        axios({
-            url: '/api/pun/noun',
-            method: 'GET'
-        }).then(res => setNoun(res.data[0].pun));
+        getNoun(setNoun);
     };
 
     return (
         <>
-        <Navbar prevPage='/pun' title='Noun'  />
-        <main>
-            <div className="btn-container">
-                <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>
-            </div>
-            <p className='random-result'>
-                {noun}
-            </p>
-        </main>
+            <Navbar prevPage='/pun' title='Noun'  />
+            <main>
+                <div className="btn-container">
+                    <button className='again-btn' onClick={getNewResult}><Icon type="again" /></button>
+                </div>
+                <p className='random-result'>
+                    {noun}
+                </p>
+            </main>
         </>
     );
 };

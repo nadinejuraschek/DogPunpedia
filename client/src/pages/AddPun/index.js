@@ -1,6 +1,6 @@
 import { Button, Navbar } from '../../components';
 
-import axios from 'axios';
+import { createPun } from '../../helper/queries';
 import { useState } from 'react';
 
 export const AddPun = () => {
@@ -9,20 +9,7 @@ export const AddPun = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        // console.log('Pun to send to DB: ' + newPun);
-        axios({
-            url: '/api/pun/create',
-            method: 'POST',
-            data: newPun
-        }).then(response => {
-            // console.log('Pun in DB: ' + response.data);
-            // re-render component
-            setNewPun({ type: '', pun: '' });
-            setMessage('🎉 Pup pup hooray! 🎉');
-        }).catch(err => {
-            // console.log('Error: ' + err);
-            setMessage('Whelp, that didn\'t work... Try again!');
-        });
+        createPun(setMessage, setNewPun, newPun);
     };
 
     const handleChange = event => {
@@ -37,7 +24,7 @@ export const AddPun = () => {
         <main>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <input 
+                    <input
                         name='pun'
                         type='text'
                         placeholder='Enter New Pun Here'

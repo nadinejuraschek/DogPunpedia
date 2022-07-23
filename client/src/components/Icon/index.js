@@ -4,6 +4,7 @@ import hashtag from '../../assets/icons/hashtag.svg';
 import list from '../../assets/icons/list-solid.svg';
 import plus from '../../assets/icons/plus-solid.svg';
 import redo from '../../assets/icons/redo.svg';
+import singleItem from '../../assets/icons/single-item.svg';
 
 export const Icon = ({ type }) => {
   switch (type) {
@@ -19,6 +20,8 @@ export const Icon = ({ type }) => {
       return <img alt='hashtags' src={hashtag} />;
     case 'plus':
       return <img alt='puns' src={plus} />;
+    case 'singleItem':
+      return <img alt='puns' src={singleItem} />;
     default:
       return <img alt='puns' src={plus} />;
   };

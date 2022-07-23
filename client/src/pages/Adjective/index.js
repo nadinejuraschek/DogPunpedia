@@ -1,28 +1,18 @@
 import { Icon, Navbar } from '../../components';
 import { useEffect, useState } from 'react';
 
-import axios from 'axios';
+import { getAdjective } from '../../helper/queries';
 
 export const Adjective = () => {
     const [ adjective, setAdjective ] = useState('');
 
     useEffect(() => {
-        axios({
-            url: '/api/pun/adjective',
-            method: 'GET'
-        }).then(res => {
-            setAdjective(res.data[0].pun);
-        }).catch(err => console.log(err));
+        getAdjective(setAdjective);
     }, []);
 
     const getNewResult = (event) => {
         event.preventDefault();
-        axios({
-            url: '/api/pun/adjective',
-            method: 'GET'
-        }).then(res => {
-            setAdjective(res.data[0].pun)
-        }).catch(err => console.log(err));
+        getAdjective(setAdjective);
     };
 
     return (
