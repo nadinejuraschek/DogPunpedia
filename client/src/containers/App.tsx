@@ -1,9 +1,5 @@
 import { AddPun, Adjective, Hashtag, Home, Noun, Phrase, Puns } from '../pages';
-import {
-  Route,
-  BrowserRouter as Router,
-  Routes
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 const App = () => (
   <Router>

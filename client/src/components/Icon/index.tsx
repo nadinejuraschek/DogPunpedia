@@ -1,3 +1,4 @@
+import { IIcon } from './types';
 import backArrow from '../../assets/icons/backArrow.svg';
 import book from '../../assets/icons/book.svg';
 import hashtag from '../../assets/icons/hashtag.svg';
@@ -6,7 +7,7 @@ import plus from '../../assets/icons/plus-solid.svg';
 import redo from '../../assets/icons/redo.svg';
 import singleItem from '../../assets/icons/single-item.svg';
 
-export const Icon = ({ type }) => {
+export const Icon = ({ type }: IIcon): JSX.Element => {
   switch (type) {
     case 'again':
       return <img className='again-icon' alt='try again' src={redo} />;
@@ -24,5 +25,5 @@ export const Icon = ({ type }) => {
       return <img alt='puns' src={singleItem} />;
     default:
       return <img alt='puns' src={plus} />;
-  };
+  }
 };
