@@ -1,7 +1,7 @@
 # Dog Punpedia for BarkGrr
 
 ## Live Demo
-[Try it out here.](https://socialmediahelper.herokuapp.com/)
+Currently not available.
 
 ## Technologies
 * JavaScript
