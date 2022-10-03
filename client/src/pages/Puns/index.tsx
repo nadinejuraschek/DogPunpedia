@@ -1,16 +1,9 @@
-// REACT
-import React from 'react';
+import { Button, Navbar } from '../../components';
+
 import { Link } from 'react-router-dom';
 
-// COMPONENTS
-import Button from '../components/Button';
-
-// COMPONENTS
-import Navbar from '../components/Navbar';
-
-const Puns = () => {
-    return (
-        <>
+export const Puns = () => (
+    <>
         <Navbar prevPage='/' title='Puns'  />
         <main>
             <Link to='/pun/adjective'>
@@ -23,8 +16,5 @@ const Puns = () => {
                 <Button title='Phrase' />
             </Link>
         </main>
-        </>
-    );
-};
-
-export default Puns;
+    </>
+);

@@ -1,0 +1,1 @@
+export type Pun = { type: 'adjective' | 'hashtag' | 'phrase' | ''; pun: string; };
